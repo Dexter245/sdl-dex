@@ -5,6 +5,13 @@ namespace dex{
 
     class Model{
 
+    private:
+
+    protected:
+
+    public:
+        virtual void update(float delta) = 0;
+
     };
 
 }

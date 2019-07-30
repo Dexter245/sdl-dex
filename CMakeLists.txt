@@ -27,7 +27,7 @@ add_executable(sdl_dex
         source/Image.cpp
         source/ImageButton.cpp
         source/InputEventHandler.cpp
-        source/main.cpp
+        test/main.cpp
         source/Model.cpp
         source/Scene.cpp
         source/Sixaxis.cpp
