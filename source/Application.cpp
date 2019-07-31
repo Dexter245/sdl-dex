@@ -82,12 +82,12 @@ void dex::Application::start() {
 
 
         //todo: calc delta time somehow somewhere
-        controller->update(0.16f);
-        view->render();
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
 
+        controller->update(0.16f);
+        view->render();
 
         SDL_RenderPresent(renderer);
 
