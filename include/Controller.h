@@ -8,8 +8,11 @@ namespace dex{
 
     public:
         virtual void update(float delta) = 0;
+        virtual ~Controller() = 0;
     };
 
 }
+
+inline dex::Controller::~Controller() {}
 
 #endif

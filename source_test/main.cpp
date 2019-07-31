@@ -17,5 +17,7 @@ int main(int argc, char **argv) {
     std::cout << "before start" << std::endl;
     app->start();
     std::cout << "after start" << std::endl;
-    delete view1, controller1, model1, app;
+    delete view1;
+    delete controller1;
+    delete model1;
 }

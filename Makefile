@@ -170,7 +170,7 @@ CPPFILES_LINUX := $(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
 HEADERFILES_LINUX := $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h))
 ROMFS_FILES_LINUX := $(foreach dir,$(ROMFS),$(wildcard $(dir)/*.*))
 
-CMD := g++ -o $(TARGET) $(CPPFILES_LINUX) $(LIBS_LINUX) $(INCLUDE_LINUX)
+CMD := g++ -Wall -O2 -ffast-math -o $(TARGET) $(CPPFILES_LINUX) $(LIBS_LINUX) $(INCLUDE_LINUX)
 
 build-linux: $(CPPFILES_LINUX) $(HEADERFILES_LINUX) $(ROMFS_FILES_LINUX)
 	@echo "cmd: " $(CMD)

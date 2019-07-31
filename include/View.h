@@ -8,7 +8,10 @@ namespace dex{
 
     public:
         virtual void render() = 0;
+        virtual ~View() = 0;
     };
+
+    inline View::~View() {}
 
 }
 

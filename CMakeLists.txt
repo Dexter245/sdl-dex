@@ -30,11 +30,11 @@ add_executable(sdl_dex
 add_custom_target(
         run-linux
         WORKING_DIRECTORY /home/dexter/Coding/switch/sdl-dex/
-        COMMAND export DEVKITPRO=/opt/devkitpro && make clean && make run-linux
+        COMMAND export DEVKITPRO=/opt/devkitpro && make run-linux
 )
 
 add_custom_target(
         run
         WORKING_DIRECTORY /home/dexter/Coding/switch/sdl-dex/
-        COMMAND export DEVKITPRO=/opt/devkitpro && make clean && make run
+        COMMAND export DEVKITPRO=/opt/devkitpro && make run
 )

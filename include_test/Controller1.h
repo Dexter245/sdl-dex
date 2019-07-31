@@ -8,9 +8,11 @@ class Controller1 : public dex::Controller {
 private:
     Model1 *model;
 public:
-    Controller1(Model1 *model);
+    explicit Controller1(Model1 *model);
+    ~Controller1() override;
 
     void update(float delta) override;
 };
+
 
 #endif

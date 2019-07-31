@@ -45,7 +45,7 @@ dex::Application::Application() {
         exit(1);
     }
 
-    window = SDL_CreateWindow("sdl-dex", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_UNDEFINED,
+    window = SDL_CreateWindow("sdl-dex", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
                               SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 
     if (window == nullptr) {
@@ -71,13 +71,7 @@ dex::Application::Application() {
 }
 
 dex::Application::~Application() {
-    SDL_DestroyWindow(window);
-    cleanup(window, renderer);
-    SDL_Quit();
-#ifdef SWITCH
-    //Clean up after we're done and close our sockets.
-    socketExit();
-#endif
+
 }
 
 void dex::Application::start() {
@@ -98,8 +92,8 @@ void dex::Application::start() {
         SDL_RenderPresent(renderer);
 
         //todo: remove later
-        SDL_Delay(1000);
-//        shouldRun = false;
+        SDL_Delay(5000);
+        end();
 
     }
 
@@ -116,6 +110,13 @@ void dex::Application::setView(dex::View *newView) {
 void dex::Application::end() {
     std::cout << "Application::end" << std::endl;
     this->shouldRun = false;
+    SDL_DestroyWindow(window);
+    cleanup(window, renderer);
+    SDL_Quit();
+#ifdef SWITCH
+    //Clean up after we're done and close our sockets.
+    socketExit();
+#endif
 }
 
 

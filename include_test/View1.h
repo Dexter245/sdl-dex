@@ -9,7 +9,8 @@ private:
     Model1 *model;
 
 public:
-    View1(Model1 *model);
+    explicit View1(Model1 *model);
+    ~View1(){}
 
     void render() override;
 };
