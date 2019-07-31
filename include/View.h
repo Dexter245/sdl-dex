@@ -1,17 +1,13 @@
-#ifndef MODEL_H_
-#define MODEL_H_
+#ifndef VIEW_H_
+#define VIEW_H_
 
 namespace dex{
 
     class View{
-
     private:
-
-    protected:
 
     public:
         virtual void render() = 0;
-
     };
 
 }

@@ -32,8 +32,8 @@ include $(DEVKITPRO)/libnx/switch_rules
 IP			:=	192.168.0.101
 TARGET		:=	sdltest1
 BUILD		:=	build
-SOURCES		:=	source test
-INCLUDES	:=	include
+SOURCES		:=	source source_test
+INCLUDES	:=	include include_test
 DATA		:=	data
 EXEFS_SRC	:=	exefs_src
 
@@ -69,7 +69,8 @@ LIBS	:=-lSDL2 -lm -lnx -lEGL -lGLESv2 -lglapi -ldrm_nouveau \
 # -lSDL2_ttf -lSDL2_image -lpng -lwebp -ljpeg  \
 # `freetype-config --libs` 
 LIBS_LINUX := -lSDL2 -lSDL2_image -lSDL2_ttf
-INCLUDE_LINUX := -I/usr/include/ -I$(INCLUDES)
+#INCLUDE_LINUX := -I/usr/include/ -I$(INCLUDES)
+INCLUDE_LINUX := -I/usr/include/ $(foreach dir,$(INCLUDES), -I$(wildcard $(dir)))
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
@@ -172,6 +173,7 @@ ROMFS_FILES_LINUX := $(foreach dir,$(ROMFS),$(wildcard $(dir)/*.*))
 CMD := g++ -o $(TARGET) $(CPPFILES_LINUX) $(LIBS_LINUX) $(INCLUDE_LINUX)
 
 build-linux: $(CPPFILES_LINUX) $(HEADERFILES_LINUX) $(ROMFS_FILES_LINUX)
+	@echo "cmd: " $(CMD)
 	$(CMD)
 
 run-linux: build-linux
