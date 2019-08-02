@@ -1,11 +1,12 @@
 #include "Application.h"
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
-#include <Utils.h>
-#include <Application.h>
 
+#include "Utils.h"
 #include "View1.h"
+#include "Event.h"
 
 
 #ifdef SWITCH
@@ -89,11 +90,14 @@ void dex::Application::start() {
         controller->update(0.16f);
         view->render();
 
+        //todo: remove later, test only
+        eventHandler.addEvent(dex::Event(dex::Event::EventType::KEY_DOWN, "test1"));
+
         SDL_RenderPresent(renderer);
 
         //todo: remove later
         SDL_Delay(5000);
-        end();
+//        end();
 
     }
 

@@ -1,10 +1,24 @@
 #ifndef EVENTLISTENER_H_
 #define EVENTLISTENER_H_
 
-namespace dex{
+#include "Event.h"
+#include <vector>
 
-    class EventListener{
+namespace dex {
 
+    class EventListener {
+
+    private:
+        std::vector<Event> eventQueue = std::vector<Event>();
+
+        virtual void handleEvents() = 0;
+
+    public:
+        void addEvent(Event &event);
+
+        bool hasEvent();
+
+        Event& getEvent();
     };
 
 }
