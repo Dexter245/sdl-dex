@@ -47,7 +47,7 @@ namespace dex {
 
         void end();
 
-        EventHandler& getEventHandler() { return eventHandler; }
+        EventHandler &getEventHandler() { return eventHandler; }
 
         Application(Application const &) = delete;
 

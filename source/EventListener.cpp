@@ -9,8 +9,8 @@ bool dex::EventListener::hasEvent() {
     return eventQueue.size() > 0;
 }
 
-dex::Event& dex::EventListener::getEvent() {
-    Event& e = eventQueue.front();
+dex::Event &dex::EventListener::getEvent() {
+    Event &e = eventQueue.front();
     eventQueue.erase(eventQueue.begin());
     return e;
 }

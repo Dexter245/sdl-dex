@@ -5,15 +5,16 @@
 #include "Event.h"
 #include "EventListener.h"
 
-namespace dex{
+namespace dex {
 
-    class EventHandler{
+    class EventHandler {
 
     private:
-        std::vector<EventListener*> listeners = std::vector<EventListener*>();
+        std::vector<EventListener *> listeners = std::vector<EventListener *>();
 
     public:
         void addEventListener(EventListener &listener);
+
         void addEvent(Event event);
 
     };

@@ -3,7 +3,7 @@
 
 void dex::EventHandler::addEvent(Event event) {
     std::cout << "eventHandler add event" << std::endl;
-    for(uint i = 0; i < listeners.size(); i++){
+    for (uint i = 0; i < listeners.size(); i++) {
         listeners[i]->addEvent(event);
     }
 }

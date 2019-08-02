@@ -1,9 +1,14 @@
 #ifndef INPUTEVENTHANDLER_H_
 #define INPUTEVENTHANDLER_H_
 
-namespace dex{
+namespace dex {
 
-    class InputEventHandler{
+    class InputEventHandler {
+
+    private:
+
+    public:
+        void update();
 
     };
 

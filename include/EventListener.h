@@ -18,7 +18,7 @@ namespace dex {
 
         bool hasEvent();
 
-        Event& getEvent();
+        Event &getEvent();
     };
 
 }
