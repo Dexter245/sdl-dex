@@ -10,17 +10,15 @@ add_executable(sdl_dex
         include/Font.h
         include/Image.h
         include/ImageButton.h
-        include/InputEventHandler.h
         include/Sixaxis.h
         include/Utils.h
         source/Application.cpp
         source/Font.cpp
         source/Image.cpp
         source/ImageButton.cpp
-        source/InputEventHandler.cpp
         source/Sixaxis.cpp
         source/Utils.cpp
-        Makefile )
+        Makefile include/Vibration.h source/Vibration.cpp)
 
 add_custom_target(
         run-linux

@@ -11,13 +11,11 @@ namespace dex {
     class Application {
 
     private:
-//        static Application *_instance = nullptr;
         dex::Controller *controller = nullptr;
         dex::View *view = nullptr;
         bool shouldRun = true;
         SDL_Renderer *renderer = nullptr;
         SDL_Window *window = nullptr;
-        SDL_Event e;
 
         Application();
 
