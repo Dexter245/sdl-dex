@@ -90,15 +90,9 @@ void dex::Application::start() {
         controller->update(0.16f);
         view->render();
 
-        //todo: remove later, test only
-//        eventHandler.addEvent(dex::Event(dex::Event::EventType::KEY_DOWN, "test1"));
 
         SDL_RenderPresent(renderer);
 
-//        todo: remove later
-//        SDL_Delay(5000);
-        SDL_Delay(200);
-//        end();
 
     }
 
