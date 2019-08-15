@@ -12,6 +12,7 @@ namespace dex{
         SDL_Texture *texture;
     public:
         explicit Image(std::string filepath);
+        ~Image();
 
         void draw(int x, int y);
     };
