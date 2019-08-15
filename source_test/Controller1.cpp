@@ -5,6 +5,7 @@
 #include "Event.h"
 #include "EventListener.h"
 #include "../include/InputEventHandler.h"
+#include "../include_test/Controller1.h"
 
 
 Controller1::Controller1(Model1 *model) :
