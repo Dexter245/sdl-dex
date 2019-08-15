@@ -3,7 +3,7 @@ project(sdl_dex)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(include include_test)
+include_directories(include)
 
 add_executable(sdl_dex
         include/Application.h
@@ -22,10 +22,9 @@ add_executable(sdl_dex
         source/Image.cpp
         source/ImageButton.cpp
         source/InputEventHandler.cpp
-        source_test/main.cpp
         source/Sixaxis.cpp
         source/Utils.cpp
-        Makefile source_test/Controller.cpp include_test/Controller.h)
+        Makefile )
 
 add_custom_target(
         run-linux
