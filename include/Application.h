@@ -5,7 +5,6 @@
 #include <iostream>
 #include "Controller.h"
 #include "View.h"
-#include "EventHandler.h"
 
 namespace dex {
 
@@ -18,7 +17,7 @@ namespace dex {
         bool shouldRun = true;
         SDL_Renderer *renderer = nullptr;
         SDL_Window *window = nullptr;
-        EventHandler eventHandler = EventHandler();
+        SDL_Event e;
 
         Application();
 
@@ -46,8 +45,6 @@ namespace dex {
         void start();
 
         void end();
-
-        EventHandler &getEventHandler() { return eventHandler; }
 
         Application(Application const &) = delete;
 

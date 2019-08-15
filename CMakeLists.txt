@@ -7,8 +7,6 @@ include_directories(include)
 
 add_executable(sdl_dex
         include/Application.h
-        include/Event.h
-        include/EventListener.h
         include/Font.h
         include/Image.h
         include/ImageButton.h
@@ -16,8 +14,6 @@ add_executable(sdl_dex
         include/Sixaxis.h
         include/Utils.h
         source/Application.cpp
-        source/Event.cpp
-        source/EventListener.cpp
         source/Font.cpp
         source/Image.cpp
         source/ImageButton.cpp

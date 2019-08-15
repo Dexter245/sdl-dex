@@ -5,8 +5,6 @@
 #include <SDL2/SDL_ttf.h>
 
 #include "Utils.h"
-#include "View1.h"
-#include "Event.h"
 
 
 #ifdef SWITCH
@@ -79,8 +77,6 @@ void dex::Application::start() {
     std::cout << "start" << std::endl;
 
     while (shouldRun) {
-//        std::cout << "mainloop, shouldRun: " << shouldRun << std::endl;
-
 
         //todo: calc delta time somehow somewhere
 
@@ -90,9 +86,7 @@ void dex::Application::start() {
         controller->update(0.16f);
         view->render();
 
-
         SDL_RenderPresent(renderer);
-
 
     }
 
