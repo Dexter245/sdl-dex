@@ -12,6 +12,6 @@ View1::View1(Model1 *model) :
 }
 
 void View1::render() {
-    std::cout << "View1::render" << std::endl;
+//    std::cout << "View1::render" << std::endl;
     background.draw(0, 0);
 }

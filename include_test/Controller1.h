@@ -5,11 +5,13 @@
 #include "Model1.h"
 #include "EventHandler.h"
 #include "Application.h"
+#include "InputEventHandler.h"
 
 class Controller1 : public dex::Controller {
 
 private:
     Model1 *model;
+    dex::InputEventHandler inputEventHandler;
 
     void handleEvents() override;
 

@@ -4,10 +4,12 @@
 #include <Controller1.h>
 #include "Event.h"
 #include "EventListener.h"
+#include "../include/InputEventHandler.h"
+
 
 Controller1::Controller1(Model1 *model) :
-        model(model) {
-    std::cout << "Controller1 constructor" << std::endl;
+        model(model),
+        inputEventHandler(){
     dex::Application::instance().getEventHandler().addEventListener(*this);
 }
 
@@ -16,7 +18,8 @@ Controller1::~Controller1() {
 }
 
 void Controller1::update(float delta) {
-    std::cout << "Controller1::update" << std::endl;
+
+    inputEventHandler.update();
 
     handleEvents();
 

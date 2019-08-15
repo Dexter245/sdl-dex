@@ -79,7 +79,7 @@ void dex::Application::start() {
     std::cout << "start" << std::endl;
 
     while (shouldRun) {
-        std::cout << "mainloop, shouldRun: " << shouldRun << std::endl;
+//        std::cout << "mainloop, shouldRun: " << shouldRun << std::endl;
 
 
         //todo: calc delta time somehow somewhere
@@ -91,12 +91,13 @@ void dex::Application::start() {
         view->render();
 
         //todo: remove later, test only
-        eventHandler.addEvent(dex::Event(dex::Event::EventType::KEY_DOWN, "test1"));
+//        eventHandler.addEvent(dex::Event(dex::Event::EventType::KEY_DOWN, "test1"));
 
         SDL_RenderPresent(renderer);
 
-        //todo: remove later
-        SDL_Delay(5000);
+//        todo: remove later
+//        SDL_Delay(5000);
+        SDL_Delay(200);
 //        end();
 
     }

@@ -29,7 +29,7 @@ include $(DEVKITPRO)/libnx/switch_rules
 #     - icon.jpgK
 #     - <libnx folder>/default_icon.jpg
 #---------------------------------------------------------------------------------
-IP			:=	192.168.0.101
+IP			:=	192.168.0.100
 TARGET		:=	sdltest1
 BUILD		:=	build
 SOURCES		:=	source source_test
