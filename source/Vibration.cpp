@@ -5,6 +5,7 @@ dex::Vibration::Vibration() {
 #ifdef SWITCH
     hidInitializeVibrationDevices(vibrationDeviceHandles[0], 2, CONTROLLER_HANDHELD, TYPE_HANDHELD);
     hidInitializeVibrationDevices(vibrationDeviceHandles[1], 2, CONTROLLER_PLAYER_1, TYPE_JOYCON_PAIR);
+    hidPermitVibration(false);
     hidPermitVibration(true);
 
     vibrationValueStop.amp_low = 0.0f;
